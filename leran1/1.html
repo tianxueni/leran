@@ -45,38 +45,44 @@
         }
     </style>
     <script type="text/javascript">
-        function dianji() {
-            fintes.style.display='block'
-            abd.style.display ='none';
-            finc.value= cef.innerHTML;
-        }
-        
-        function bian() {
-            abd.style.display ='block';
-            fintes.style.display='none'
-            cef.innerHTML= finc.value;
-        }
-        function que(){
-            abd.style.display ='block';
-            fintes.style.display='none'
-        }
+        // function dianji() {
+        //     fintes.style.display='block'
+        //     abd.style.display ='none';
+        //     finc.value= cef.innerHTML;
+        // }
+        //
+        // function bian() {
+        //     abd.style.display ='block';
+        //     fintes.style.display='none'
+        //     cef.innerHTML= finc.value;
+        // }
+        // function que(){
+        //     abd.style.display ='block';
+        //     fintes.style.display='none'
+        // }
 
+        for (var i=1; i<=9; i++){
+                for(var j=1; j<=i; j++){
+                    document.write(j+"*"+i+'='+(j*i)+"&nbsp;&nbsp;")
+                }
+                document.write("<br>")
+        }
     </script>
 </head>
 <body>
 <div class="main">
-    <div id="abd" class="finte" style="display: block">
-        <div  id="cef" class="fintes">聪明绝顶的人</div>
-        <input type="button" value="编辑"  onclick="dianji();">
-    </div>
+    <!--<div id="abd" class="finte" style="display: block">-->
+        <!--<div  id="cef" class="fintes">聪明绝顶的人</div>-->
+        <!--<input type="button" value="编辑"  onclick="dianji();">-->
+    <!--</div>-->
 
-    <div id="fintes" class="finte" style="display: none;">
-        <input type="text" value="" id="finc">
-        <input type="button" value="保存" onclick="bian()">
-        <input type="button" value="取消" onclick="que()">
-    </div>
+    <!--<div id="fintes" class="finte" style="display: none;">-->
+        <!--<input type="text" value="" id="finc">-->
+        <!--<input type="button" value="保存" onclick="bian()">-->
+        <!--<input type="button" value="取消" onclick="que()">-->
+    <!--</div>-->
 
-    <div class="left"></div>
+    <!--<div class="left"></div>-->
 </div>
 
 
