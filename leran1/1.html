@@ -45,6 +45,7 @@
         }
     </style>
     <script type="text/javascript">
+        //显示隐藏且赋值
         // function dianji() {
         //     fintes.style.display='block'
         //     abd.style.display ='none';
@@ -60,13 +61,38 @@
         //     abd.style.display ='block';
         //     fintes.style.display='none'
         // }
-
-        for (var i=1; i<=9; i++){
-                for(var j=1; j<=i; j++){
-                    document.write(j+"*"+i+'='+(j*i)+"&nbsp;&nbsp;")
+        //99成法表
+        // st:
+        // for (var i=1; i<=9; i++){
+        //         for(var j=1; j<=i; j++){
+        //             document.write(j+"*"+i+'='+(j*i)+"&nbsp;&nbsp;")
+        //             if(j==5)
+        //                 break st;
+        //         }
+        //         document.write("<br>")
+        // }
+        //1000个表格第二个高亮且
+        document.write('<table border="1" width="888" align="center">');
+        var i =0;
+        while(i<10000){
+            if(i%10==0){
+                if(i%20==0){
+                    bg= 'orange';
+                } else{
+                    bg="#e6e6e6";
                 }
-                document.write("<br>")
+
+                document.write('<tr bgcolor="'+bg+'">');
+            }
+                document.write('<td>'+i+'</td>');
+            i++
+            if(i%10==0){
+                document.write('</tr>');
+            }
         }
+        document.write('</table>')
+
+
     </script>
 </head>
 <body>
