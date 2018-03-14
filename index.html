@@ -1,1 +1,84 @@
-学习js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        body{padding: 0; margin: 0; list-style: none;}
+        .main{
+            width: 1000px;
+            height: 400px;
+            border-radius:10px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        .main img{
+            width: 1000px;
+            height: 400px;
+        }
+        .left{
+            width: 200px;
+            height: 100px;
+            background: #9c9c9c;
+            float: left;
+        }
+        .mid{
+            width: 200px;
+            height: 100px;
+            float: left;
+        }
+        .right{
+            width: 200px;
+            height: 100px;
+            background: #9c9c9c;
+        }
+        #abd{  width: 200px; height: 25px;}
+        .finte,.fintes{ float: left}
+        .fintes input{
+            border: none;
+            width: 200px; height: 23px;
+        }
+    </style>
+    <script type="text/javascript">
+        function dianji() {
+            fintes.style.display='block'
+            abd.style.display ='none';
+            finc.value= cef.innerHTML;
+        }
+        
+        function bian() {
+            abd.style.display ='block';
+            fintes.style.display='none'
+            cef.innerHTML= finc.value;
+        }
+        function que(){
+            abd.style.display ='block';
+            fintes.style.display='none'
+        }
+
+    </script>
+</head>
+<body>
+<div class="main">
+    <div id="abd" class="finte" style="display: block">
+        <div  id="cef" class="fintes">聪明绝顶的人</div>
+        <input type="button" value="编辑"  onclick="dianji();">
+    </div>
+
+    <div id="fintes" class="finte" style="display: none;">
+        <input type="text" value="" id="finc">
+        <input type="button" value="保存" onclick="bian()">
+        <input type="button" value="取消" onclick="que()">
+    </div>
+
+
+</div>
+
+
+
+
+
+
+</body>
+
+</html>
