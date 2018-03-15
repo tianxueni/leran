@@ -106,12 +106,12 @@
         // var b = 34;
         // alert(a%b);
 
-        table(5,3);
-        function table(row,col) {
-            document.write('<table border="1" width="888" align="center">');
+        table(5,3,"orange",800);
+        function table(row,col,color,width) {
+            document.write('<table border="1" width="'+width+'" align="center">');
             for (var i = 0; i < row; i++) {
                 if (i % 2 == 0)
-                    var bg="red";
+                    var bg=color;
                 else
                     var bg ="";
                 document.write('<tr bgcolor="'+bg+'">')
