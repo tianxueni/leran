@@ -64,6 +64,9 @@
         //99成法表
         // st:
         // for (var i=1; i<=9; i++){
+        //          if(i==5){
+        //                break;
+        //           }
         //         for(var j=1; j<=i; j++){
         //             document.write(j+"*"+i+'='+(j*i)+"&nbsp;&nbsp;")
         //             if(j==5)
@@ -72,25 +75,57 @@
         //         document.write("<br>")
         // }
         //1000个表格第二个高亮且
-        document.write('<table border="1" width="888" align="center">');
-        var i =0;
-        while(i<10000){
-            if(i%10==0){
-                if(i%20==0){
-                    bg= 'orange';
-                } else{
-                    bg="#e6e6e6";
-                }
+        // document.write('<table border="1" width="888" align="center">');
+        // var i =0;
+        // while(i<10000){
+        //     if(i%10==0){
+        //         if(i%20==0){
+        //             bg= 'orange';
+        //         } else{
+        //             bg="#e6e6e6";
+        //         }
+        //
+        //         document.write('<tr onmouseover="show(this)" onmouseout="noshow(this)" bgcolor="'+bg+'">');
+        //     }
+        //         document.write('<td>'+i+'</td>');
+        //     i++
+        //     if(i%10==0){
+        //         document.write('</tr>');
+        //     }
+        // }
+        // document.write('</table>')
+        //     var ys=null;
+        //     function  show(obj) {
+        //         ys=obj.bgColor;
+        //         obj.bgColor="red";
+        //     }
+        //     function  noshow(obj) {
+        //         obj.bgColor=ys;
+        //     }
+        // var a = 76;
+        // var b = 34;
+        // alert(a%b);
 
-                document.write('<tr bgcolor="'+bg+'">');
+        table(5,3);
+        function table(row,col) {
+            document.write('<table border="1" width="888" align="center">');
+            for (var i = 0; i < row; i++) {
+                if (i % 2 == 0)
+                    var bg="red";
+                else
+                    var bg ="";
+                document.write('<tr bgcolor="'+bg+'">')
+                for(var j=0; j<col;j++)
+                    document.write('<td>'+(i*col+j)+'</td>')
+                document.write('</tr>')
             }
-                document.write('<td>'+i+'</td>');
-            i++
-            if(i%10==0){
-                document.write('</tr>');
-            }
+            document.write('</table>');
         }
-        document.write('</table>')
+
+
+
+
+
 
 
     </script>
