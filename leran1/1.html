@@ -223,10 +223,27 @@
         for (pro in p){
             document.write('p.'+pro+'='+p[pro]+'<br>')
         }*/
+
+
     </script>
+    <style type="text/css">
+        .test{
+            width: 500px;
+            height: 200px;
+            background: antiquewhite;
+            border: 1px solid #9c9c9c;
+            color: aquamarine;
+            display: block;
+        }
+        .demo{
+            background: burlywood;
+        }
+    </style>
 </head>
 <body>
-<div class="main">
+<div>5555</div>
+<input id="username" type="text" name="useername" value="zhangshang">
+<div><a  id="main"href="www.baidu.com" target="_blank" title="hello word">test</a>
     <!--<div id="abd" class="finte" style="display: block">-->
         <!--<div  id="cef" class="fintes">聪明绝顶的人</div>-->
         <!--<input type="button" value="编辑"  onclick="dianji();">-->
@@ -241,7 +258,58 @@
     <!--<div class="left"></div>-->
 </div>
 
+<script type="text/javascript">
+    /**
+    var aobj =document.getElementById('main');
+    aobj.href="www.taobao.com";
+    aobj.title='This is my he';
+    ffie(aobj,"wwwwww");
+    alert(aobj.title);
 
+    function ffie(obj,value) {
+        if(document.all){
+            if ( typeof (value)=='underfined');
+                return obj.innerText;
+            else
+                obj.innerText=value;
+        }else {
+            if ( typeof (value)=='underfined');
+            return obj.textContent;
+        else
+            obj.textContent=value;
+
+        }
+    }*/
+
+    /*var aobj =document.getElementById('main');
+    aobj.href="www.taobao.com";
+    aobj.title='This is my he';
+    //alert(aobj.innerHTML);
+    alert(aobj.auterHtml);
+    */
+
+    //获取表单value textarea 都是通过value来获取里面的值
+    /*var username = document.getElementById('username')
+    alert(username.value)*/
+
+    //通过class类名来获取
+
+    //var namets =document.getElementsByClassName('test')
+
+    var aobj =document.getElementById('main');
+    aobj.href="www.taobao.com";
+    aobj.title='This is my he';
+
+    aobj.className='test demo';//同时添加两个类名样式
+    aobj.className+='demo';//再次添加一个类名样式用+=衔接起来
+    aobj.className='';//清除前面所有的类名样式
+    var prot="";
+    for(prot in aobj){
+            document.write("a."+prot+"="+aobj[prot]+"<br>")
+    }
+
+
+</script>
 
 
 
