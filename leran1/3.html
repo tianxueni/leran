@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        body ul li{padding: 0; margin: 0; list-style: none;}
+
+        #card{
+            width: 300px;
+            height: 200px;
+        }
+        #tit{
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+        }
+        #tit a{
+            display:inline-block;
+            width: 80px;
+            background: burlywood;
+            line-height: 25px;
+            text-align: center;
+            border: aliceblue 2px solid;
+
+        }
+        #content{
+            width: 100%;
+            height: 175px;
+            background: darkcyan;
+        }
+        #content div{
+            display: none;
+        }
+
+        #content .one{
+            display: block;
+        }
+        #tit h3{
+            border: burlywood 2px solid;
+            font-size: 14px;
+            float: left;
+            background: burlywood;
+            margin-right: 10px;
+            padding: 0 10px;
+            height: 24px;
+            line-height: 24px;
+        }
+        #tit h3.titn{
+            border: darkcyan 2px solid;
+            color: #fff;
+            background: darkcyan;
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="card">
+        <div id="tit">
+            <h3 onmouseover="show(0)" class="titn">第一项</h3>
+            <h3 onmouseover="show(1)">第二项</h3>
+            <h3 onmouseover="show(2)">第三项</h3>
+        </div>
+        <div id="content">
+            <div class="one">
+                <ul>
+                    <li>44444444</li>
+                    <li>44444444</li>
+                    <li>44444444</li>
+                    <li>44444444</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>555555555</li>
+                    <li>555555555</li>
+                    <li>555555555</li>
+                    <li>555555555</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>66666666666</li>
+                    <li>66666666666</li>
+                    <li>66666666666</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+<div>
+
+    <script>
+        var atit = document.getElementsByTagName('h3');
+        var dtext = document.getElementById('content').getElementsByTagName('div');
+        function show(num) {
+            for (var i=0; i<atit.length; i++)
+                if(i==num){
+                    atit[num].className='titn';
+                    dtext[num].style.display="block";
+                }else{
+                    atit[i].className="";
+                    dtext[i].style.display="none";
+                }
+
+        }
+    </script>
+</div>
+
+
+
+</body>
+
+</html>
