@@ -161,6 +161,7 @@
         document.write(str);
         */
 
+        /*第一种
         function play() {
             
         }
@@ -178,13 +179,50 @@
         }
         p.test=function () {
             
+        }*/
+
+        //第二种
+        /*function play() {
+
+            var p=new Object();
+            //属性
+            p.width=300;
+            p.height=200;
+            p.num=4;
+            p.autotime=4;
+
+            //方法
+            p.autotime=function () {
+
+            }
+            p.test=function () {
+
+            }
+            return p;
         }
+        var p=play();
+        */
+        //第三种
 
+       /* function play(width,height,num) {
+            this.width=width;
+            this.height=height;
+            this.num=num;
 
+            this.autoplay=function () {
+                    alert("111111")
+            }
+            this.test=function () {
+                
+            }
+            return this;
 
-
-
-
+        }
+        var p=new play(3000,200,8);
+        var pro ="";
+        for (pro in p){
+            document.write('p.'+pro+'='+p[pro]+'<br>')
+        }*/
     </script>
 </head>
 <body>
